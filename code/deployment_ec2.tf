@@ -25,7 +25,7 @@ EOF
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "web_host"
     yor_trace            = "446dffca-8eb0-47ef-88dd-48521ca63bc6"
   }
@@ -44,7 +44,7 @@ resource "aws_ebs_volume" "web_host_storage" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "web_host_storage"
     yor_trace            = "3e350e99-e108-41a8-adc0-12c857cf5c74"
   }
@@ -62,7 +62,7 @@ resource "aws_ebs_snapshot" "example_snapshot" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "example_snapshot"
     yor_trace            = "f46b4658-1e4e-44ce-94eb-e38468f96b9a"
   }
@@ -110,7 +110,7 @@ resource "aws_security_group" "web-node" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "web-node"
     yor_trace            = "4bd7a2d1-d056-437c-85b1-290a2877996c"
   }
@@ -128,7 +128,7 @@ resource "aws_vpc" "web_vpc" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "web_vpc"
     yor_trace            = "92322ff9-d6f4-4e0c-a754-3691c3f670a0"
   }
@@ -148,7 +148,7 @@ resource "aws_subnet" "web_subnet" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "web_subnet"
     yor_trace            = "0c19ab31-221f-4099-b9fe-d885a0f833b3"
   }
@@ -168,7 +168,7 @@ resource "aws_subnet" "web_subnet2" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "web_subnet2"
     yor_trace            = "9aba2cd6-b3d9-4980-a327-a1ae589787f0"
   }
@@ -186,7 +186,7 @@ resource "aws_internet_gateway" "web_igw" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "web_igw"
     yor_trace            = "a606f650-e363-4562-9dd3-54ce216b00f2"
   }
@@ -203,7 +203,7 @@ resource "aws_route_table" "web_rtb" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "web_rtb"
     yor_trace            = "4378d0da-8dbf-4847-9f1d-ca4a452cf1a1"
   }
@@ -240,7 +240,7 @@ resource "aws_network_interface" "web-eni" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "web-eni"
     yor_trace            = "f0fac281-f55e-405d-9388-d8775bffb0c7"
   }
@@ -261,7 +261,7 @@ resource "aws_flow_log" "vpcflowlogs" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "vpcflowlogs"
     yor_trace            = "be2bb8fe-f172-471f-b27b-208938aed243"
   }
@@ -278,7 +278,7 @@ resource "aws_s3_bucket" "flowbucket" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "flowbucket"
     yor_trace            = "000adefc-00fd-45d2-9e22-bbda2e25cde5"
   }

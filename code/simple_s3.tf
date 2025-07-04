@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "dev_s3" {
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
     git_modifiers        = "tprendervill"
     git_org              = "ducta95"
-    git_repo             = "prisma-cloud-devsecops-workshop"
+    git_repo             = "prisma-cloud-devsecops-workshop2"
     yor_name             = "dev_s3"
     yor_trace            = "fb7809cd-750a-4240-8b16-007647ea3f6a"
   }
