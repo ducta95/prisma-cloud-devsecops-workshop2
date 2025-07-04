@@ -24,4 +24,4 @@ jobs:
           checkov -d . \
             --bc-api-key "89f2a3a4-a2c6-4422-a844-30d476f38ef1::AfYWmBmicG3uUwgQysMUcuumulw=" \
             --repo-id "ducta95/prisma-cloud-devsecops-workshop" \
-            --prisma-api-url "https://api2.prismaclou
+            --prisma-api-url "https://api2.prismacloud.io"
