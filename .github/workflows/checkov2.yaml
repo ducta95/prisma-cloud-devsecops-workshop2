@@ -1,0 +1,27 @@
+name: Checkov Prisma Cloud Scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  checkov:
+    name: Run Checkov Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Checkov
+        run: |
+          pip install checkov
+
+      - name: Run Checkov with Prisma Cloud
+        run: |
+          checkov -d . \
+            --bc-api-key "89f2a3a4-a2c6-4422-a844-30d476f38ef1::AfYWmBmicG3uUwgQysMUcuumulw=" \
+            --repo-id "ducta95/prisma-cloud-devsecops-workshop" \
+            --prisma-api-url "https://api2.prismaclou
