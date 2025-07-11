@@ -1,15 +1,17 @@
 name: checkov
+
 on:
   pull_request:
   push:
     branches:
       - main    
+
 jobs:
   scan:
     runs-on: ubuntu-latest 
     permissions:
-      contents: read # for actions/checkout to fetch code
-      security-events: write # for GitHub/codeql-action/upload-sarif to upload SARIF results
+      contents: read
+      security-events: write
      
     steps:
     - uses: actions/checkout@v2
@@ -18,18 +20,15 @@ jobs:
       id: checkov
       uses: bridgecrewio/checkov-action@master
       with:
-        directory: code/
-        #soft_fail: true
         api-key: ${{ secrets.BC_API_KEY }}
-      #env:
-        PRISMA_API_URL: https://app.sg.prismacloud.io
+        repo-id: prisma/devsecops-workshop2
+        directory: .  # hoặc code/ nếu folder code nằm trong đó
+        output: sarif
+        output-file-path: results.sarif
+        prisma-api-url: https://app.sg.prismacloud.io
         
     - name: Upload SARIF file
-      uses: GitHub/codeql-action/upload-sarif@v3
-      
-      # Results are generated only on a success or failure
-      # this is required since GitHub by default won't run the next step
-      # when the previous one has failed. Alternatively, enable soft_fail in checkov action.
+      uses: github/codeql-action/upload-sarif@v3
       if: success() || failure()
       with:
         sarif_file: results.sarif
